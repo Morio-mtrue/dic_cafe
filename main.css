@@ -1,0 +1,294 @@
+@charset "utf-8";
+
+/* =========================================
+   Base
+   ========================================= */
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  padding-bottom: 75px;
+  min-height: 100%;
+  color: #251e19;
+  line-height: 1.6;
+}
+
+li {
+  list-style: none;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+div,
+li {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* =========================================
+   Header / global navigation
+   ========================================= */
+
+.header_nav {
+  background: linear-gradient(90deg, #fff 20%, rgba(0, 0, 0, .6) 60%);
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: stretch;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.global_nav_item {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.global_nav_item:hover {
+  background: #fff;
+  color: #42210b;
+}
+
+.global_nav {
+  display: flex;
+  align-items: stretch;
+}
+
+.logo {
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+}
+
+/* =========================================
+   Shared layout parts
+   ========================================= */
+
+.section_inner {
+  padding: 50px 10% 30px;
+}
+
+.section_title {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section_title h1 {
+  margin: 0 0 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* =========================================
+   Header key visual
+   ========================================= */
+
+.key {
+  height: 500px;
+  background: center / cover no-repeat url("../images/sample_key.jpg");
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  /* stack the title and subtitle, then centre them vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.key h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px;
+}
+
+/* =========================================
+   CONCEPT section  (text 60% / image 35%)
+   ========================================= */
+
+.concept {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.concept .section_title {
+  width: 100%;
+}
+
+.concept > p {
+  width: 60%;
+  line-height: 1.9;
+}
+
+.concept > img {
+  width: 35%;
+}
+
+/* =========================================
+   MENU section
+   ========================================= */
+
+.menu {
+  /* background-attachment: fixed -> the photo stays put while the page scrolls */
+  background: center / cover no-repeat fixed url("../images/sample_menu_bg.jpg");
+}
+
+.menu_title {
+  display: inline-block;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.5rem;
+  color: #42210b;
+  border-bottom: solid #42210b 1px;
+  margin-bottom: 20px;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu li {
+  width: 49%;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, .85);
+  /* the <img> comes last in the HTML, row-reverse pulls it to the left */
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li h2 {
+  font-size: 1rem;
+  margin: 0 0 5px;
+}
+
+.menu li p {
+  font-size: .875rem;
+}
+
+/* Recommended menu: image 55%, text block fills the rest */
+.menu section:first-of-type li img {
+  width: 55%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.menu section:first-of-type .menu_body {
+  width: 43%;
+}
+
+/* price on its own line, pushed to the right */
+.menu section:first-of-type .menu_body p:last-of-type {
+  text-align: right;
+  margin-top: 10px;
+}
+
+/* Coffee menu: round image 20%, text block 80% */
+.coffee_menu_image {
+  width: 20%;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.menu section:last-of-type .menu_body {
+  width: 76%;
+}
+
+/* =========================================
+   ACCESS section
+   ========================================= */
+
+.access dl {
+  display: flex;
+  margin: 0 0 20px;
+}
+
+.access dt {
+  width: 80px;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.access dd {
+  margin-left: 20px;
+}
+
+.access iframe {
+  width: 100%;
+  height: 300px;
+  margin-top: 30px;
+  display: block;
+}
+
+/* =========================================
+   Footer  (pinned to the bottom of the page)
+   ========================================= */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background: #251e19;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+}
+
+footer li {
+  margin: 0 10px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: .875rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer img {
+  width: 60px;
+  display: block;
+}
+
+footer p {
+  font-size: .75rem;
+  margin-top: 5px;
+}
