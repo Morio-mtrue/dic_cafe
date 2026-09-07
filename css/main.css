@@ -108,7 +108,7 @@ img {
 
 .key {
   height: 500px;
-  background: center / cover no-repeat url("../images/sample_key.jpg");
+  background: center / cover no-repeat url("../sample_key.jpg");
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
   /* stack the title and subtitle, then centre them vertically */
@@ -152,7 +152,7 @@ img {
 
 .menu {
   /* background-attachment: fixed -> the photo stays put while the page scrolls */
-  background: center / cover no-repeat fixed url("../images/sample_menu_bg.jpg");
+  background: center / cover no-repeat fixed url("../sample_menu_bg.jpg");
 }
 
 .menu_title {
