@@ -172,8 +172,9 @@ img {
 
 .menu li {
   width: 49%;
+  /* 20px of space around the inside of each frame, 20px between frames */
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 20px;
   background: rgba(255, 255, 255, .85);
   /* the <img> comes last in the HTML, row-reverse pulls it to the left */
   display: flex;
@@ -217,7 +218,9 @@ img {
 }
 
 .menu section:last-of-type .menu_body {
-  width: 76%;
+  width: 80%;
+  /* border-box keeps the width at exactly 80% while spacing the text off the image */
+  padding-left: 20px;
 }
 
 /* =========================================
